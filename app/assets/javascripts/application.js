@@ -11,6 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+// app/assets/javascripts/application.js
+
+//= require jquery
+//= require plugin
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
