@@ -1,9 +1,19 @@
-<h5><%= link_to "Create a new cocktail", new_cocktail_path %></h5>
-<h1>Get Drunk With Mister Cocktail</h1>
+<h1 class="text-center">Welcome to Mister Cocktail</h1>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li> <%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <%= cocktail.name %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
