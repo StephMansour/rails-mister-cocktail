@@ -48,7 +48,7 @@ gem "autoprefixer-rails"
 
 #for impage upload and security
 gem 'figaro'
-gem 'cloudinary', "1.8.0"
+gem 'cloudinary', "1.1.0"
 gem 'carrierwave', '~> 0.11.2'
 
 group :development, :test do

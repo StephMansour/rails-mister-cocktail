@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="text-center"><%= @cocktail.name %></h1>
-  <%= cl_image_tag @cocktail.photo, height: 150, width: 200, crop: :fill %>
+  <%= cl_image_tag @cocktail.photo? ? @cocktail.photo : 'herradura-tequila-mojito_kwulpb' , height: 150, width: 200, crop: :fill %>
 
   <% @cocktail.doses.each do |dose| %>
   <p><%= dose.description %> - <%= dose.ingredient.name %> <span><%= link_to "delete", dose_path(dose), method: :delete %></span></p>
